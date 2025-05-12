@@ -1,0 +1,85 @@
+﻿Task 1: find the largest of three numbers
+
+
+i) numbers
+p) Initialize largest_num with 0 value. loop on numbers one by one. If number > largest_num, set largest_num to num
+o) largest_num
+
+
+Task 2: Detect a scheduling conflict between two courses based on their start and end times
+i) Two start/end time pairs (course1: start1, end1; course2: start2, end2)
+p) If start1 < end2 AND start2 < end1, there’s a conflict.
+Start1: 9
+End1: 10
+Start2: 11
+End2: 12
+o) "Yes" if conflict, otherwise "No"
+
+
+Task 3: determine whether a student is eligible for a merit scholarship
+* Criteria: GPA >= 3.5, no failing grade, and attendance >= 80%
+i) take student GPA, grades fail/pass booleans and attendance
+p) check GPA is greater than or equal to 3.5. Check if all grades are passed. Check attendance is greater than or equal to 80% 
+o) If all checks pass, eligible. Otherwise not eligible
+
+
+Task 4: calculate an electric bill using the following slab rates:
+* First 100 units: Rs. 5/unit
+* Next 100 units: Rs. 10/unit
+* Units above 200: Rs. 15/unit
+i) take units
+p) if units are less than or equal to 100, return units * 5
+    If units are less than or equal to 200, (100 * 5) + ((units - 100) * 10)
+    If units are greater than 200, (100 * 5) + (100 * 10) + ((units - 200) * 15) 
+o) return calculated amount
+
+
+Task 5: Design an IPO model for a discount engine used in an online store.
+Discounts:
+● Spend ≥ Rs. 500 → 10% off
+● Spend ≥ Rs. 1000 → 20% off
+● Spend ≥ Rs. 2000 → 25% off
+i) spend amount
+p) 
+applyDiscount(n, dicountPercentage) => n - ((dicountPercentage / n) * 100)
+spend >= 2000, applyDiscount(spend, 25)
+spend >= 1000, applyDiscount(spend, 20)
+spend >= 500, applyDiscount(spend, 10)
+o) return applyDiscount result
+
+
+Task 6: Design an IPO model for a gym membership system that calculates monthly fees.
+Charges:
+● Under age 25 → Rs. 500
+● Over age 60 → Rs. 300
+● All others → Rs. 800
+● Rs. 10 extra for every visit beyond 12 visits per month
+i) age, visits per month
+p)
+extra_visits_count = visits_per_month - 12 || 0
+age <= 25, 500 + (extra_visits_count * 10)
+age > 60, 300 + (extra_visits_count * 10)
+800 + (extra_visits_count * 10)
+o) return calculated amount
+
+
+Task 7: Design an IPO model to calculate a student’s admission score using weighted marks.
+● Math: 40%
+● Physics: 40%
+● Interview: 20%
+● If Math score > 90, add a bonus of 5 points to the final score
+i) math_score, physics_score, interview_score
+p) 
+weighted = (math_score * 0.4) + (physics_score * 0.4) + (interview_score * 0.2)
+if math_score > 90, add 5 bonus but make sure to cap at 100
+o) final_score
+
+
+Task 8: Determine what the system’s inputs and processes might have been. Google Maps rerouting due to traffic
+i) user's current location, destination, and current traffic data
+p)
+Check traffic on the current route
+If traffic is heavy, search for a faster route
+Compare travel times
+Choose the fastest route
+o) updated_route

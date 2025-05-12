@@ -1,0 +1,155 @@
+Lab tasks
+
+Lab Task 1: Coffee Shop Bill Calculator
+Write an algorithm to calculate the total bill at a coffee shop. The user should input the price of
+an item and the quantity they want to purchase. The algorithm should compute the subtotal, add
+8% tax, and display the final total.
+
+START
+  INPUT item_price, quantity
+  subtotal = item_price * quantity
+  total = (subtotal * 0.8) + subtotal
+  OUTPUT total
+END
+
+Lab Task 2: Weekly Water Intake Tracker
+Design an algorithm to help a person track their weekly water intake. The program should ask
+the user to input their daily water intake (in liters) for 7 days, calculate the total intake, and
+determine whether the person met their weekly goal of 14 liters.
+
+START
+  FOR i FROM 1 TO 7
+    INPUT daily_water_intake_liters
+    total_water_intake = total_water_intake + daily_water_intake_liters
+  ENDFOR
+  IF total_water_intake >= 14 THEN
+    OUTPUT "good work"
+  ELSE
+    OUTPUT "not enough"
+  ENDIF
+END
+
+Lab Task 3: Movie Ticket Price with Discount
+Create an algorithm to calculate the total price of movie tickets. The user should input the
+number of tickets and whether they are a student. If the user is a student, they should receive a
+15% discount.
+
+START
+  INPUT ticket_price, number_of_tickets, is_student
+  total_price = ticket_price * number_of_tickets
+  IF is_student THEN
+    total_price = total_price * 0.85
+  ENDIF
+  OUTPUT total_price
+END
+
+Lab Task 4: Mobile Data Usage Warning
+Write an algorithm that takes the user’s mobile data limit and the amount of data they’ve used.
+The program should warn the user if less than 10% of their data is remaining.
+
+START
+  INPUT data_used, amount_of_data
+  IF data_used < (amount_of_data * 0.1) THEN
+    OUTPUT "warning"
+  ENDIF
+END
+
+Lab Task 5: Bus Fare Calculator Based on Age
+Design an algorithm to determine a person's bus fare based on their age. Use the following
+conditions:
+● Children under 5 ride free.
+● Students (ages 5–18) pay 5 units.
+● Adults (ages 19–60) pay 10 units.
+● Seniors (over 60) pay 6 units.
+
+START
+  INPUT age
+  IF age < 5 THEN
+    OUTPUT "free"
+  ELSE IF age <= 18 THEN
+    OUTPUT "5 units"
+  ELSE IF age <= 60 THEN
+    OUTPUT "10 units"
+  ELSE
+    OUTPUT "6 units"
+  ENDIF
+END
+
+Lab Task 6: Daily Step Tracker
+Create an algorithm to calculate the total number of steps a person walks in a week. The user
+should input their daily steps for 7 days. The algorithm should also calculate the average
+number of steps per day.
+
+START
+  days = 7
+  total_steps = 0
+  FOR i FROM 1 TO days
+    INPUT daily_steps
+    total_steps = total_steps + daily_steps
+  ENDFOR
+  average_steps = total_steps / days
+  OUTPUT total_steps, average_steps
+END
+
+Lab Task 7: Rain Forecast Alert
+Write an algorithm that checks the weather forecast for the next 5 days. The user should input
+whether it is expected to rain or not each day. If rain is expected on any day, the program should
+display a message advising the user to carry an umbrella.
+
+START
+  days = 5
+  FOR i FROM 1 TO days
+    INPUT expected_rain
+    IF expected_rain THEN
+      OUTPUT "carry an umbrella"
+    ENDIF
+  ENDFOR
+END
+
+Lab Task 8: Parking Fee Calculator
+Design an algorithm to calculate the parking fee based on the number of hours a car is parked.
+The first 2 hours cost 5 units. Every additional hour costs 2 units each.
+
+START
+  INPUT car_parking_hours
+  IF car_parking_hours <= 2 THEN
+    OUTPUT 5
+  ELSE
+    OUTPUT 5 + (car_parking_hours - 2) * 2
+  ENDIF
+END
+
+Lab Task 9: Delivery Tip Calculator
+Write an algorithm to suggest a tip amount based on a customer's service rating. The user
+should input the bill amount and rate the service from 1 to 5:
+● Rating 4 or 5: tip = 20% of bill
+● Rating 3: tip = 10% of bill
+● Rating 1 or 2: no tip
+
+START
+  INPUT bill_amount, service_rating
+  IF service_rating >= 4 THEN
+    OUTPUT bill_amount * 0.2
+  ELSE IF service_rating = 3 THEN
+    OUTPUT bill_amount * 0.1
+  ELSE
+    OUTPUT 0
+  ENDIF
+END
+
+Lab Task 10: Eco Points Tracker for Recycling
+Create an algorithm to calculate eco points based on the number of items a user recycles:
+● Less than 10 items: 1 point per item
+● Between 10 and 20 items: 2 points per item
+● More than 20 items: 3 points per item
+
+START
+  INPUT number_of_recycling_items
+  IF number_of_recycling_items < 10 THEN
+    OUTPUT number_of_recycling_items
+  ELSE IF number_of_recycling_items <= 20 THEN
+    OUTPUT number_of_recycling_items * 2
+  ELSE
+    OUTPUT number_of_recycling_items * 3
+  ENDIF
+END
